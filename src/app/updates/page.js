@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { oswald } from "../fonts";
-import { acme } from "../fonts";
+import { grotesk } from "../fonts";
 import Link from "next/link";
+import Navbar from "../components/navbar";
 
 export default function About() {
   return (
@@ -16,16 +17,16 @@ export default function About() {
         priority // Added priority to ensure it loads immediately as a background
         className="z-0 object-cover opacity-80"
       />
-
+      <Navbar />
       {/* Content Overlay: Use z-10 and remove background colors from this container */}
       <main className="relative z-10 p-6 md:p-12">
         {/* Outer Wrapper: Centered column with a max width */}
         <div
-          className={`${oswald.className} flex flex-col gap-10 max-w-4xl mx-auto mt-8`}
+          className={`${grotesk.className} pt-24 flex flex-col gap-10 max-w-4xl mx-auto mt-8`}
         >
           {/* Heading */}
           <div className="w-full text-center md:text-left">
-            <h1 className="text-5xl font-bold text-white drop-shadow-md">
+            <h1 className="font-acme text-5xl font-bold text-white drop-shadow-md">
               Find the Latest Updates
             </h1>
           </div>

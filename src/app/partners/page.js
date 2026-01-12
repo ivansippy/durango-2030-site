@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { oswald } from "../fonts";
+import { grotesk } from "../fonts";
 import Link from "next/link";
 
 export default function About() {
@@ -8,19 +8,19 @@ export default function About() {
     <div className="relative min-h-screen">
       {/* Background Image: Ensure z-0 and object-cover */}
       <Image
-        src="/assets/IMG_3630.JPG"
+        src="/assets/9-26-25 _ UCI Bike Parade ©DelaneyO'Connor-26.jpg"
         alt="Background of cyclists"
         layout="fill"
         objectFit="cover"
         priority // Added priority to ensure it loads immediately as a background
-        className="z-0"
+        className="z-0 opacity-60 object-cover"
       />
 
       {/* Content Overlay: Use z-10 and remove background colors from this container */}
       <main className="relative z-10 p-10 md:p-12">
         {/* Outer Wrapper for all rows */}
         <div
-          className={`${oswald.className} flex flex-col gap-10 max-w-8xl mx-auto mt-8`}
+          className={`${grotesk.className} pt-24 flex flex-col gap-10 max-w-8xl mx-auto mt-8`}
         >
           {/* --- First Row of Boxes --- */}
           <div className="flex flex-col md:flex-row gap-10 w-full">

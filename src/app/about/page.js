@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { oswald } from "../fonts";
+import { grotesk } from "../fonts";
 
 export default function About() {
   return (
@@ -19,7 +19,7 @@ export default function About() {
       <main className="relative z-10 p-10 md:p-12">
         {/* Outer Wrapper for all rows */}
         <div
-          className={`${oswald.className} flex flex-col gap-10 max-w-8xl mx-auto mt-8`}
+          className={`${grotesk.className} pt-24 flex flex-col gap-10 max-w-8xl mx-auto mt-8`}
         >
           {/* --- First Row of Boxes --- */}
           <div className="flex flex-col md:flex-row gap-10 w-full">
@@ -39,7 +39,7 @@ export default function About() {
             {/* Box 1.2 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
               <h2
-                className={`${oswald.className} text-3xl font-bold mb-4 text-gray-900`}
+                className={`${grotesk.className} text-3xl font-bold mb-4 text-gray-900`}
               >
                 WORLD-CLASS FACILITY
               </h2>
@@ -56,7 +56,7 @@ export default function About() {
             {/* Box 2.1 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
               <h2
-                className={`${oswald.className} text-3xl font-bold mb-4 text-gray-900`}
+                className={`${grotesk.className} text-3xl font-bold mb-4 text-gray-900`}
               >
                 EXPERIENCE
               </h2>
@@ -72,7 +72,7 @@ export default function About() {
             {/* Box 2.2 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
               <h2
-                className={`${oswald.className} text-3xl font-bold mb-4 text-gray-900`}
+                className={`${grotesk.className} text-3xl font-bold mb-4 text-gray-900`}
               >
                 PREMIER DESTINATION
               </h2>
@@ -93,7 +93,7 @@ export default function About() {
             {/* Box 3.1 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
               <h2
-                className={`${oswald.className} text-3xl font-bold mb-4 text-gray-900`}
+                className={`${grotesk.className} text-3xl font-bold mb-4 text-gray-900`}
               >
                 LEGACY
               </h2>

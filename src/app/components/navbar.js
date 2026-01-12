@@ -1,46 +1,36 @@
 import Link from "next/link"; // Use 'Link' for Next.js routing
 import Image from "next/image";
-import { acme } from "../fonts"; // Import the Oswald font
+import { acme } from "../fonts"; // Import the Acme font
+import { grotesk } from "../fonts";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-100/80 p-4 sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo/Event Name */}
-        <Link href="/" className="text-white text-2xl font-bold">
-          <Image
-            src="/assets/WebsiteWorlds.png" // Ensure you have a logo image at this path
-            alt="Durango 2030 Logo"
-            width={200}
-            height={200}
-            className="inline-block mr-2"
-          />
-        </Link>
+    <header className="absolute top-0 left-0 right-0 z-50">
+      <nav className="mx-auto max-w-6xl py-4">
+        <div className="flex items-center justify-between rounded-2xl bg-slate-100/35 backdrop-blur-md border border-white/15 shadow-lg px-6 py-3">
+          <div className="text-white font-semibold">
+            <Link href="/">
+              <div className={`${acme.className} flex items-center gap-2 hover:cursor-pointer`}>
+                <Image
+                  src="/assets/WebsiteWorlds.png"
+                  alt="Durango Worlds 2030 Logo"
+                  width={150}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+          </div>
 
-        {/* Navigation Links */}
-        <div className="flex space-x-20 px-15 text-3xl">
-          <Link
-            href="/about"
-            className={`${acme.className} text-gray-700 hover:text-blue-500 transition`}
-          >
-            About
-          </Link>
-          <Link
-            href="/partners"
-            className={`${acme.className} text-gray-700 hover:text-blue-500 transition`}
-          >
-            Partners
-          </Link>
-          <Link
-            href="/updates"
-            className={`${acme.className} text-gray-700 hover:text-blue-500 transition`}
-          >
-            Updates
-          </Link>
+          <div className="flex gap-15 text-black/90 text-3xl">
+            <a className={`${grotesk.className} hover:text-red-500`} href="/about">About</a>
+            <a className={`${grotesk.className} hover:text-red-500`} href="/partners">Partners</a>
+            <a className={`${grotesk.className} hover:text-red-500`} href="/updates">Updates</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
-};
+}
 
 export default Navbar;

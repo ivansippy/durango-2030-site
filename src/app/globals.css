@@ -24,3 +24,100 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* --- MailerLite: make it match your dark / frosted style --- */
+#mlb2-35557292,
+#mlb2-35557292 * {
+  font-family: var(--font-grotesk), system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+#mlb2-35557292.ml-form-embedContainer .ml-form-embedWrapper {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+#mlb2-35557292 .ml-form-embedBody,
+#mlb2-35557292 .ml-form-successBody {
+  padding: 0 !important;
+}
+
+#mlb2-35557292 .ml-form-embedContent {
+  text-align: center !important;
+  margin: 0 0 16px 0 !important;
+}
+
+#mlb2-35557292 .ml-title {
+  font-family: var(--font-grotesk) !important;
+  color: rgba(97, 97, 97, 1) !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+#mlb2-35557292 .ml-subtitle {
+  color: rgba(97, 97, 97, 1)  !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+}
+
+/* Layout: input + button in one row on desktop */
+#mlb2-35557292 .ml-form-horizontalRow {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+
+#mlb2-35557292 .ml-input-horizontal {
+  width: 100% !important;
+  float: none !important;
+}
+
+#mlb2-35557292 .ml-button-horizontal {
+  width: auto !important;
+  float: none !important;
+  display: flex !important;
+}
+
+/* Input styling */
+#mlb2-35557292 input.form-control {
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: rgba(97, 97, 97, 1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  border-radius: 12px !important;
+  padding: 14px 14px !important;
+  outline: none !important;
+}
+
+#mlb2-35557292 input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Button styling (Durango red accent) */
+#mlb2-35557292 button.primary {
+  background: rgb(220 38 38) !important; /* tailwind red-600 */
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+#mlb2-35557292 button.primary:hover {
+  background: rgb(185 28 28) !important; /* red-700 */
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 640px) {
+  #mlb2-35557292 .ml-form-horizontalRow {
+    flex-direction: column !important;
+  }
+  #mlb2-35557292 .ml-button-horizontal {
+    width: 100% !important;
+  }
+  #mlb2-35557292 button.primary {
+    width: 100% !important;
+  }
+}
+/* --- End MailerLite styles --- */
