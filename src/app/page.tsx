@@ -10,9 +10,9 @@ export default function Home() {
         alt="Background of cyclists"
         layout="fill" // Fill the parent container
         objectFit="cover" // Cover the whole area without stretching
-        className="absolute inset-0 z-0 opacity-50" // Apply opacity here
+        className="absolute inset-0 z-0 opacity-40" // Apply opacity here
       />
-      <main className="flex min-h-screen min-w-screen max-w-3xl flex-col items-center justify-between py-32 px-40 bg-slate sm:items-start">
+      <main className="flex min-h-screen min-w-screen max-w-3xl flex-col items-center justify-between py-32 px-40 sm:items-start">
         <div className="flex flex-col items-center text-center">
           <h1 className={`${acme.className} text-6xl text-red-600 font-bold`}>
             Durango 2030

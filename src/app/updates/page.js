@@ -14,7 +14,7 @@ export default function About() {
         layout="fill"
         objectFit="cover"
         priority // Added priority to ensure it loads immediately as a background
-        className="z-0 object-cover opacity-40"
+        className="z-0 object-cover opacity-80"
       />
 
       {/* Content Overlay: Use z-10 and remove background colors from this container */}
