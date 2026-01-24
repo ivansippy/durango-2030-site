@@ -16,7 +16,7 @@ export default function About() {
       />
 
       {/* Content Overlay: Use z-10 and remove background colors from this container */}
-      <main className="relative z-10 p-10 md:p-12">
+      <main className="mt-24 flex flex-col gap-10 md:flex-row">
         {/* Outer Wrapper for all rows */}
         <div
           className={`${grotesk.className} pt-24 flex flex-col gap-10 max-w-8xl mx-auto mt-8`}
