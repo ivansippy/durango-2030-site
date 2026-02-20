@@ -12,11 +12,15 @@ const Footer = () => {
         <div className="flex flex-col gap-30 sm:flex-row md:items-center sm:justify-between">
           {/* Left */}
           <div className="flex-1">
-            <p className={`${grotesk.className} text-gray-700 mb-2`}>
-              manager@durangocyclingchampionship.com
+            <p className={`${grotesk.className} text-gray-700 hover:text-blue-500 mb-2`}>
+              <Link href="mailto:manager@durangocyclingchampionship.com">
+                manager@durangocyclingchampionship.com
+              </Link>
             </p>
-            <p className={`${grotesk.className} text-gray-700 mb-2`}>
-              coordinator@durangocyclingchampionship.com
+            <p className={`${grotesk.className} text-gray-700 hover:text-blue-500 mb-2`}>
+              <Link href="mailto:coordinator@durangocyclingchampionship.com">
+                coordinator@durangocyclingchampionship.com
+              </Link>
             </p>
             <p className={`${grotesk.className} text-gray-700 mb-2`}>
               © 2026 Durango Cycling Championships. All rights reserved.

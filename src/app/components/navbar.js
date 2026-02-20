@@ -12,9 +12,9 @@ const Navbar = () => {
             <Link href="/">
               <div className={`${acme.className} flex items-center gap-2 hover:cursor-pointer`}>
                 <Image
-                  src="/assets/DWC_Modern.png"
+                  src="/assets/LOGO - Recreation.png"
                   alt="Durango Worlds 2030 Logo"
-                  width={100}
+                  width={180}
                   height={100}
                   className="object-contain"
                 />
