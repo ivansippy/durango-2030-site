@@ -42,8 +42,23 @@ export default function About() {
                 src="/assets/Press Release Durango Worlds 2030_vFNL.pdf#toolbar=0"
                 className="w-full h-[600px] rounded-md border"
                 title="PDF Document"
+              ></iframe>
+            </div>
+            <div className="bg-white/80 p-8 rounded-lg shadow-xl w-full">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                Donation Statement
+              </h3>
+              <p className="text-gray-800 text-lg">
+                The Community Foundation Serving Southwest Colorado (SWCF) is our fiscal sponsor.  As such, SWCF will receive funds from donations, grants, and sponsorships, disburse money, prepare tax forms, carry liability coverage, and perform other administrative tasks related to our funds.  SWCF, a 501(c)(3) nonprofit organization, currently manages more than $10 million, ensuring our initiatives' financial stability and transparency, giving you confidence in your support.  Your donations to the Southwest Colorado Local Organizing Committee through SWCF are fully tax deductible to the extent allowable by IRS regulations. The Community Foundation's EIN Federal Tax ID is 84-1474900.
+              </p>
+              <Link
+                href="https://cfssc.fcsuite.com/erp/donate/create/fund?funit_id=3442"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${grotesk.className} mt-4 inline-block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors`}
               >
-              </iframe>
+                Donate Now
+              </Link>
             </div>
           </div>
         </div>
