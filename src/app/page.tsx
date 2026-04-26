@@ -63,6 +63,12 @@ export default function Home() {
           >
             Days Until Durango 2030
           </h2>
+          <p style={{color: 'white'}}>
+  {process.env.NEXT_PUBLIC_SUPABASE_URL ? 'URL loaded' : 'URL missing'}
+</p>
+<p style={{color: 'white'}}>
+  {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'KEY loaded' : 'KEY missing'}
+</p>
           <CountdownTimer />
         </section>
         {/* 1990 LEGACY CALLOUT */}
