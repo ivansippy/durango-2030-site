@@ -27,12 +27,28 @@ export default function About() {
           {/* Heading */}
           <div className="w-full text-center md:text-left">
             <h1 className="font-acme text-5xl font-bold text-white drop-shadow-md">
-              Find the Latest Updates
+              Find the Latest Information and Updates on Durango Worlds 2030
             </h1>
           </div>
 
           {/* Single Column Updates List */}
           <div className="flex flex-col gap-6 w-full">
+            {/* PRESS CONTACT */}
+            <div className="bg-white/80 p-8 rounded-lg shadow-xl w-full mb-2">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                Media and Sponsorship Inquiries
+              </h3>
+              <p className="text-gray-700 mb-4">
+                For media or sponsorship inquiries related to the Durango Worlds 2030,
+                please contact us directly.
+              </p>
+              <a
+                href="mailto:manager@durangocyclingchampionship.com"
+                className={`${grotesk.className} inline-block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors`}
+              >
+                Contact Press Team
+              </a>
+            </div>
             {/* Update Box 1 */}
             <div className="bg-white/80 p-8 rounded-lg shadow-xl w-full">
               <h3 className="text-2xl font-bold mb-3 text-gray-900">
@@ -49,7 +65,17 @@ export default function About() {
                 Donation Statement
               </h3>
               <p className="text-gray-800 text-lg">
-                The Community Foundation Serving Southwest Colorado (SWCF) is our fiscal sponsor.  As such, SWCF will receive funds from donations, grants, and sponsorships, disburse money, prepare tax forms, carry liability coverage, and perform other administrative tasks related to our funds.  SWCF, a 501(c)(3) nonprofit organization, currently manages more than $10 million, ensuring our initiatives' financial stability and transparency, giving you confidence in your support.  Your donations to the Southwest Colorado Local Organizing Committee through SWCF are fully tax deductible to the extent allowable by IRS regulations. The Community Foundation's EIN Federal Tax ID is 84-1474900.
+                The Community Foundation Serving Southwest Colorado (SWCF) is
+                our fiscal sponsor. As such, SWCF will receive funds from
+                donations, grants, and sponsorships, disburse money, prepare tax
+                forms, carry liability coverage, and perform other
+                administrative tasks related to our funds. SWCF, a 501(c)(3)
+                nonprofit organization, currently manages more than $10 million,
+                ensuring our initiatives' financial stability and transparency,
+                giving you confidence in your support. Your donations to the
+                Southwest Colorado Local Organizing Committee through SWCF are
+                fully tax deductible to the extent allowable by IRS regulations.
+                The Community Foundation's EIN Federal Tax ID is 84-1474900.
               </p>
               <Link
                 href="https://cfssc.fcsuite.com/erp/donate/create/fund?funit_id=3442"

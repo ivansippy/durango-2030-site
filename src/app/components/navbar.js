@@ -43,7 +43,7 @@ const Navbar = () => {
               href="/updates"
               className={`${grotesk.className} hover:text-red-500 transition-colors`}
             >
-              Updates
+              Info & Updates
             </Link>
 
             {/* Donate button */}
