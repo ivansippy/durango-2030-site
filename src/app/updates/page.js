@@ -1,11 +1,9 @@
-import React from "react";
 import Image from "next/image";
-import { oswald } from "../fonts";
 import { grotesk } from "../fonts";
 import Link from "next/link";
 import Navbar from "../components/navbar";
 
-export default function About() {
+export default function Updates() {
   return (
     <div className="relative min-h-screen">
       {/* Background Image: Ensure z-0 and object-cover */}
@@ -14,7 +12,7 @@ export default function About() {
         alt="Background of cyclists"
         layout="fill"
         objectFit="cover"
-        priority // Added priority to ensure it loads immediately as a background
+        priority
         className="z-0 object-cover opacity-80"
       />
       <Navbar />

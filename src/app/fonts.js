@@ -1,18 +1,15 @@
-// src/app/fonts.ts
-import { Inter, Oswald, Acme, Space_Grotesk } from "next/font/google"; // Import the names from Google
+import { Inter, Oswald, Acme, Space_Grotesk } from "next/font/google";
 
-// Configure your primary font (e.g., body text)
 export const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter", // Create a CSS variable
+  variable: "--font-inter",
 });
 
-// Configure a secondary font for headings
 export const oswald = Oswald({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-oswald", // Create another CSS variable
+  variable: "--font-oswald",
 });
 
 export const acme = Acme({
@@ -26,4 +23,4 @@ export const grotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-grotesk",
-})
+});

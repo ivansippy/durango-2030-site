@@ -1,7 +1,5 @@
-// src/components/Footer.tsx
 import Link from "next/link";
 import Script from "next/script";
-import React from "react";
 import { grotesk } from "../fonts";
 import NewsletterFormEmbed from "./newsletter_form";
 

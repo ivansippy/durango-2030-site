@@ -18,9 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${oswald.variable} ${acme.variable}`}>
       <body>
-                {/* Always stays here */}
-        <main><Navbar />{children}<Analytics /></main> {/* This is where page.tsx content appears */}
-        <Footer />        {/* Always stays here */}
+        <main><Navbar />{children}<Analytics /></main>
+        <Footer />
       </body>
     </html>
   );

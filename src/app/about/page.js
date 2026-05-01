@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { grotesk } from "../fonts";
 
@@ -11,7 +10,7 @@ export default function About() {
         alt="Background of cyclists"
         layout="fill"
         objectFit="cover"
-        priority // Added priority to ensure it loads immediately as a background
+        priority
         className="z-0"
       />
 
@@ -25,7 +24,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row gap-10 w-full">
             {/* Box 1.1 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
-              <h2 className={`text-3xl font-bold mb-4 text-gray-900`}>
+              <h2 className={`${grotesk.className} text-3xl font-bold mb-4 text-gray-900`}>
                 WE ARE READY
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -89,6 +88,7 @@ export default function About() {
               </p>
             </div>
           </div>
+          {/* --- Third Row of Boxes --- */}
           <div className="flex flex-col md:flex-row gap-10 w-full">
             {/* Box 3.1 */}
             <div className="flex-1 bg-white/80 p-8 rounded-lg shadow-xl">
