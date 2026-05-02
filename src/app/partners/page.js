@@ -2,6 +2,17 @@ import Image from "next/image";
 import { grotesk } from "../fonts";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Partners",
+  description:
+    "Meet the partners making Durango 2030 possible — Purgatory Resort, City of Durango, UCI, and USA Cycling.",
+  openGraph: {
+    title: "Partners | Durango 2030",
+    description:
+      "The organizations behind the 2030 UCI Mountain Bike World Championships bid.",
+  },
+};
+
 export default function Partners() {
   return (
     <div className="relative min-h-screen">

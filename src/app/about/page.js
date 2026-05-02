@@ -1,6 +1,17 @@
 import Image from "next/image";
 import { grotesk } from "../fonts";
 
+export const metadata = {
+  title: "About the Event",
+  description:
+    "Why Durango, Colorado is the perfect host for the 2030 UCI Mountain Bike World Championships — world-class facilities, deep legacy, and elite athlete pipeline.",
+  openGraph: {
+    title: "About the Event | Durango 2030",
+    description:
+      "Why Durango is ready to host the 2030 UCI MTB World Championships at Purgatory Resort.",
+  },
+};
+
 export default function About() {
   return (
     <div className="relative min-h-screen">

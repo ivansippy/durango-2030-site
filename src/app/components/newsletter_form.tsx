@@ -37,19 +37,6 @@ export default function NewsletterForm() {
 
       if (!res.ok) throw new Error("Supabase error");
 
-      // Optionally also send to MailerLite
-      await fetch("https://connect.mailerlite.com/api/subscribers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_MAILERLITE_API_KEY}`,
-        },
-        body: JSON.stringify({
-          email,
-          fields: { name },
-        }),
-      });
-
       setStatus("success");
       setMessage("You're in! We'll be in touch.");
       setName("");

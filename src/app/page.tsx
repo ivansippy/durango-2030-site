@@ -4,9 +4,41 @@ import Navbar from "./components/navbar";
 import Link from "next/link";
 import CountdownTimer from "./components/countdown";
 
+const eventJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  name: "2030 UCI Mountain Bike World Championships",
+  startDate: "2030-09-01",
+  endDate: "2030-09-07",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  location: {
+    "@type": "Place",
+    name: "Purgatory Resort",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Durango",
+      addressRegion: "CO",
+      addressCountry: "US",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "Southwest Colorado Local Organizing Committee",
+    url: "https://durangoworlds.com",
+  },
+  url: "https://durangoworlds.com",
+  description:
+    "The 2030 UCI Mountain Bike World Championships return to Durango, Colorado — 40 years after the first ever MTB Worlds were held at Purgatory Resort in 1990.",
+};
+
 export default function Home() {
   return (
     <div className="relative min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+      />
       {/* Background Image covers the full page height (as the page grows) */}
       <div className="absolute inset-0 -z-10">
         <Image

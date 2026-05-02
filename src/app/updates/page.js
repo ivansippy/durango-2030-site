@@ -3,6 +3,17 @@ import { grotesk } from "../fonts";
 import Link from "next/link";
 import Navbar from "../components/navbar";
 
+export const metadata = {
+  title: "Updates & News",
+  description:
+    "Latest news, press releases, and updates about the 2030 UCI Mountain Bike World Championships coming to Durango, Colorado.",
+  openGraph: {
+    title: "Updates & News | Durango 2030",
+    description:
+      "Press releases and latest news about the Durango 2030 UCI MTB World Championships bid.",
+  },
+};
+
 export default function Updates() {
   return (
     <div className="relative min-h-screen">

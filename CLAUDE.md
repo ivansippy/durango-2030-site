@@ -17,7 +17,6 @@ npm run lint     # ESLint check
 - **Tailwind CSS v4** (PostCSS-based — no `tailwind.config.*` file; configured via CSS imports in `globals.css`)
 - **React Compiler** enabled via Babel plugin in `next.config.ts`
 - **Supabase** for newsletter subscriber storage (client-side fetch via `NEXT_PUBLIC_SUPABASE_*` env vars)
-- **MailerLite** for email marketing (account 2025796, form 35557292; also client-side)
 - **Vercel Analytics** via `<Analytics />` in root layout
 
 ## Architecture
@@ -26,9 +25,9 @@ npm run lint     # ESLint check
 
 **Layout:** `src/app/layout.tsx` wraps every page with `<Navbar>`, page content, `<Analytics />`, and `<Footer>`. Google Font CSS variables (`--font-inter`, `--font-oswald`, `--font-acme`) are applied to the `<html>` element via `src/app/fonts.js`.
 
-**Client vs Server Components:** Navbar and Footer are plain JS Server Components. Interactive components — `countdown.tsx` (timer to 2030-09-01) and `newsletter_form.tsx` (dual Supabase + MailerLite submit) — are `"use client"`.
+**Client vs Server Components:** Navbar and Footer are plain JS Server Components. Interactive components — `countdown.tsx` (timer to 2030-09-01) and `newsletter_form.tsx` (Supabase subscriber submit) — are `"use client"`.
 
-**Newsletter form flow:** On submit, `newsletter_form.tsx` POSTs to Supabase REST API first, then calls the MailerLite API. A 409 from Supabase means the email is already subscribed.
+**Newsletter form flow:** On submit, `newsletter_form.tsx` POSTs to Supabase REST API. A 409 from Supabase means the email is already subscribed.
 
 **Styling:** Tailwind utilities inline in JSX. `src/app/globals.css` also contains extensive custom CSS for the MailerLite embedded form (frosted-glass dark theme). Primary accent color: `red-600`/`red-700`.
 
@@ -50,5 +49,4 @@ Stack: Next.js (or whatever your framework is), Vercel hosting, GitHub CI/CD, Su
 ```
 NEXT_PUBLIC_SUPABASE_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY
-NEXT_PUBLIC_MAILERLITE_API_KEY   # used in newsletter_form.tsx
 ```
