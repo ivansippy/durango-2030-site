@@ -3,18 +3,21 @@
 import { useState } from "react";
 import { grotesk } from "../fonts";
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+
+  const heading = dark ? "text-white/90" : "text-gray-700";
+  const body = dark ? "text-white/70" : "text-gray-600";
+  const input = dark ? "text-white/90 placeholder-white/50" : "text-gray-700 placeholder-gray-400";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
 
     try {
-      // Write to Supabase
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/subscribers`,
         {
@@ -41,7 +44,7 @@ export default function NewsletterForm() {
       setMessage("You're in! We'll be in touch.");
       setName("");
       setEmail("");
-    } catch (err) {
+    } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
     }
@@ -51,24 +54,20 @@ export default function NewsletterForm() {
     <div className="w-full max-w-md rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 p-6 shadow-lg">
       {status === "success" ? (
         <div className="text-center">
-          <h4
-            className={`${grotesk.className} text-xl font-bold text-gray-700 mb-2`}
-          >
+          <h4 className={`${grotesk.className} text-xl font-bold ${heading} mb-2`}>
             Thank you!
           </h4>
-          <p className={`${grotesk.className} text-gray-600`}>
+          <p className={`${grotesk.className} ${body}`}>
             You have successfully joined our subscriber list.
           </p>
         </div>
       ) : (
         <>
           <div className="mb-4 text-center">
-            <h4
-              className={`${grotesk.className} text-2xl font-bold text-gray-700 mb-1`}
-            >
+            <h4 className={`${grotesk.className} text-2xl font-bold ${heading} mb-1`}>
               Stay Informed
             </h4>
-            <p className={`${grotesk.className} text-gray-600 text-sm`}>
+            <p className={`${grotesk.className} ${body} text-sm`}>
               Sign up for news and updates as we close in on the event!
             </p>
           </div>
@@ -79,7 +78,7 @@ export default function NewsletterForm() {
               placeholder="First name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={`${grotesk.className} w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-gray-700 placeholder-gray-400 outline-none focus:border-white/40 transition-colors`}
+              className={`${grotesk.className} w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 ${input} outline-none focus:border-white/40 transition-colors`}
             />
             <input
               type="email"
@@ -87,7 +86,7 @@ export default function NewsletterForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className={`${grotesk.className} w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-gray-700 placeholder-gray-400 outline-none focus:border-white/40 transition-colors`}
+              className={`${grotesk.className} w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 ${input} outline-none focus:border-white/40 transition-colors`}
             />
             <button
               type="submit"
@@ -98,9 +97,7 @@ export default function NewsletterForm() {
             </button>
 
             {message && status === "error" && (
-              <p
-                className={`${grotesk.className} text-center text-sm text-red-400`}
-              >
+              <p className={`${grotesk.className} text-center text-sm ${dark ? "text-red-300" : "text-red-400"}`}>
                 {message}
               </p>
             )}

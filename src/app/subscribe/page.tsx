@@ -29,9 +29,9 @@ export default function Subscribe() {
           Stay in the Loop
         </h1>
         <p className={`${grotesk.className} text-white/80 text-lg mb-10 max-w-md`}>
-          Be the first to hear about tickets, athlete announcements, and event updates for the 2030 UCI Mountain Bike World Championships.
+          Be the first to hear about event updates for the 2030 UCI Mountain Bike World Championships.
         </p>
-        <NewsletterForm />
+        <NewsletterForm dark />
       </main>
     </div>
   );
