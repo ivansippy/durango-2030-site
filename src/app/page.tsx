@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { grotesk } from "./fonts";
-import Navbar from "./components/navbar";
 import Link from "next/link";
 import CountdownTimer from "./components/countdown";
+import TimelineBar from "./components/timeline";
+import NewsSection from "./components/news-section";
 
 const eventJsonLd = {
   "@context": "https://schema.org",
@@ -51,7 +52,8 @@ export default function Home() {
         {/* Optional overlay for readability (recommended) */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      <Navbar />
+      {/* TIMELINE */}
+      <TimelineBar />
       {/* HERO */}
       <main className="mx-auto max-w-6xl px-6">
         <section className="min-h-screen pt-20 flex flex-col items-center justify-center text-center py-24">
@@ -146,7 +148,7 @@ export default function Home() {
                 Partners
               </h3>
               <p className={`${grotesk.className} text-white/70 text-sm`}>
-                Who's making this happen
+                Who&apos;s making this happen
               </p>
             </Link>
             <Link
@@ -164,6 +166,9 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* IN THE NEWS */}
+        <NewsSection />
       </main>
     </div>
   );

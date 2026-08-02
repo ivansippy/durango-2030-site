@@ -19,10 +19,9 @@ export default function About() {
       <Image
         src="/assets/IMG_3630.JPG"
         alt="Background of cyclists"
-        layout="fill"
-        objectFit="cover"
+        fill
         priority
-        className="z-0"
+        className="z-0 object-cover"
       />
 
       {/* Content Overlay: Use z-10 and remove background colors from this container */}

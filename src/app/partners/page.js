@@ -20,8 +20,7 @@ export default function Partners() {
       <Image
         src="/assets/9-26-25 _ UCI Bike Parade ©DelaneyO'Connor-26.jpg"
         alt="Background of cyclists"
-        layout="fill"
-        objectFit="cover"
+        fill
         priority
         className="z-0 opacity-60 object-cover"
       />

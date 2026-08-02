@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { grotesk } from "../fonts";
 import Link from "next/link";
-import Navbar from "../components/navbar";
 
 export const metadata = {
   title: "Updates & News",
@@ -21,12 +20,10 @@ export default function Updates() {
       <Image
         src="/assets/PA_WorldChamps2025_XCOWE_USAC-48.jpg"
         alt="Background of cyclists"
-        layout="fill"
-        objectFit="cover"
+        fill
         priority
         className="z-0 object-cover opacity-80"
       />
-      <Navbar />
       {/* Content Overlay: Use z-10 and remove background colors from this container */}
       <main className="relative z-10 p-6 md:p-12">
         {/* Outer Wrapper: Centered column with a max width */}
@@ -80,11 +77,11 @@ export default function Updates() {
                 forms, carry liability coverage, and perform other
                 administrative tasks related to our funds. SWCF, a 501(c)(3)
                 nonprofit organization, currently manages more than $10 million,
-                ensuring our initiatives' financial stability and transparency,
+                ensuring our initiatives&apos; financial stability and transparency,
                 giving you confidence in your support. Your donations to the
                 Southwest Colorado Local Organizing Committee through SWCF are
                 fully tax deductible to the extent allowable by IRS regulations.
-                The Community Foundation's EIN Federal Tax ID is 84-1474900.
+                The Community Foundation&apos;s EIN Federal Tax ID is 84-1474900.
               </p>
               <Link
                 href="https://cfssc.fcsuite.com/erp/donate/create/fund?funit_id=3442"
