@@ -69,27 +69,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/* YOUTUBE VIDEO */}
-        <section className="pb-24">
-          <div className="mx-auto w-full max-w-4xl">
-            <h2
-              className={`${grotesk.className} text-2xl sm:text-3xl font-semibold text-white mb-6`}
-            >
-              Watch the Story
-            </h2>
-
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl">
-              <iframe
-                src="https://www.youtube.com/embed/i3aK7YlU0jk?si=yRku7u7EiSNV1tMn"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="absolute inset-0 h-full w-full border-0"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </section>
         {/* COUNTDOWN */}
         <section className="pb-24 text-center">
           <h2
@@ -121,52 +100,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        {/* QUICK LINKS */}
-        <section className="pb-24">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <Link
-              href="/about"
-              className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 text-center hover:bg-white/20 transition-colors"
-            >
-              <h3
-                className={`${grotesk.className} text-white font-semibold text-xl mb-2`}
-              >
-                The Event
-              </h3>
-              <p className={`${grotesk.className} text-white/70 text-sm`}>
-                Why Durango, why 2030
-              </p>
-            </Link>
-            <Link
-              href="/partners"
-              className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 text-center hover:bg-white/20 transition-colors"
-            >
-              <h3
-                className={`${grotesk.className} text-white font-semibold text-xl mb-2`}
-              >
-                Partners
-              </h3>
-              <p className={`${grotesk.className} text-white/70 text-sm`}>
-                Who&apos;s making this happen
-              </p>
-            </Link>
-            <Link
-              href="/updates"
-              className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 text-center hover:bg-white/20 transition-colors"
-            >
-              <h3
-                className={`${grotesk.className} text-white font-semibold text-xl mb-2`}
-              >
-                Updates
-              </h3>
-              <p className={`${grotesk.className} text-white/70 text-sm`}>
-                Latest news and press
-              </p>
-            </Link>
-          </div>
-        </section>
-
         {/* IN THE NEWS */}
         <NewsSection />
       </main>
