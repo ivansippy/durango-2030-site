@@ -4,7 +4,20 @@ import { useSyncExternalStore } from "react";
 import { grotesk } from "../fonts";
 
 const TARGET_DATE = new Date("2030-09-01T00:00:00Z").getTime();
-const TARGET_YEAR = 2030;
+
+interface YearMilestone {
+  year: number;
+  bullets: string[];
+}
+
+// Placeholder bullets — swap in the real milestones per year when available.
+const MILESTONES: YearMilestone[] = [
+  { year: 2026, bullets: ["Details coming soon"] },
+  { year: 2027, bullets: ["Details coming soon"] },
+  { year: 2028, bullets: ["Details coming soon"] },
+  { year: 2029, bullets: ["Details coming soon"] },
+  { year: 2030, bullets: ["Details coming soon"] },
+];
 
 function subscribe() {
   return () => {};
@@ -21,44 +34,54 @@ function getServerSnapshot() {
 export default function TimelineBar() {
   const now = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
-  if (now === null) {
-    return <div className="w-full pt-24 sm:pt-28" />;
-  }
-
-  const currentYear = new Date(now).getFullYear();
-  const startOfYear = new Date(currentYear, 0, 1).getTime();
-
-  const years: number[] = [];
-  for (let y = Math.min(currentYear, TARGET_YEAR); y <= TARGET_YEAR; y++) {
-    years.push(y);
-  }
-  if (years.length === 0) years.push(TARGET_YEAR);
-
-  const span = TARGET_DATE - startOfYear;
-  const elapsed = now - startOfYear;
-  const progress = span > 0 ? Math.min(100, Math.max(0, (elapsed / span) * 100)) : 100;
+  const startYear = MILESTONES[0].year;
+  const startOfRange = new Date(startYear, 0, 1).getTime();
+  const span = TARGET_DATE - startOfRange;
+  const progress =
+    now === null ? 0 : Math.min(100, Math.max(0, ((now - startOfRange) / span) * 100));
+  const currentYear = now === null ? null : new Date(now).getFullYear();
 
   return (
-    <div className="w-full bg-black/30 backdrop-blur-md border-b border-white/10 pt-24 sm:pt-28 pb-4">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="relative h-1.5 rounded-full bg-white/15">
+    <div className="w-full">
+      <div className="relative h-1.5 rounded-full bg-white/15 mb-8">
+        <div
+          className="absolute inset-y-0 left-0 rounded-full bg-red-600 transition-all duration-700"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {MILESTONES.map(({ year, bullets }) => (
           <div
-            className="absolute inset-y-0 left-0 rounded-full bg-red-600 transition-all duration-700"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        <div className="flex justify-between mt-2">
-          {years.map((y) => (
-            <span
-              key={y}
-              className={`${grotesk.className} text-xs sm:text-sm ${
-                y === currentYear ? "text-red-500 font-bold" : "text-white/70"
+            key={year}
+            className={`bg-white/10 backdrop-blur-md border rounded-2xl p-6 ${
+              year === currentYear
+                ? "border-red-500/60 ring-1 ring-red-500/40"
+                : "border-white/15"
+            }`}
+          >
+            <p
+              className={`${grotesk.className} text-2xl font-bold ${
+                year === currentYear ? "text-red-500" : "text-white"
               }`}
             >
-              {y}
-            </span>
-          ))}
-        </div>
+              {year}
+            </p>
+            {year === currentYear && (
+              <p className="text-xs font-medium uppercase tracking-widest text-red-500/80 mb-3">
+                You are here
+              </p>
+            )}
+            <ul
+              className={`${grotesk.className} text-white/70 text-sm space-y-2 list-disc list-inside ${
+                year === currentYear ? "" : "mt-3"
+              }`}
+            >
+              {bullets.map((bullet, i) => (
+                <li key={i}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

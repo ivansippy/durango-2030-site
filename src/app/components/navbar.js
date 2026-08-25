@@ -47,14 +47,12 @@ const Navbar = () => {
             </Link>
 
             {/* Donate button */}
-            <a
-              href="https://cfssc.fcsuite.com/erp/donate/create/fund?funit_id=3442"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/donate"
               className={`${grotesk.className} bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors`}
             >
-              Donate
-            </a>
+              Help Out
+            </Link>
           </div>
 
         </div>

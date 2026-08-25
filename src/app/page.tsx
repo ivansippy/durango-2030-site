@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { grotesk } from "./fonts";
-import Link from "next/link";
-import CountdownTimer from "./components/countdown";
 import TimelineBar from "./components/timeline";
 import NewsSection from "./components/news-section";
 
@@ -52,8 +50,6 @@ export default function Home() {
         {/* Optional overlay for readability (recommended) */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      {/* TIMELINE */}
-      <TimelineBar />
       {/* HERO */}
       <main className="mx-auto max-w-6xl px-6">
         <section className="min-h-screen pt-20 flex flex-col items-center justify-center text-center py-24">
@@ -69,14 +65,14 @@ export default function Home() {
           </p>
         </section>
 
-        {/* COUNTDOWN */}
+        {/* TIMELINE */}
         <section className="pb-24 text-center">
           <h2
-            className={`${grotesk.className} text-2xl sm:text-3xl font-semibold text-white mb-4`}
+            className={`${grotesk.className} text-2xl sm:text-3xl font-semibold text-white mb-8`}
           >
-            Days Until Durango 2030
+            The Road to 2030
           </h2>
-          <CountdownTimer />
+          <TimelineBar />
         </section>
         {/* 1990 LEGACY CALLOUT */}
         <section className="pb-24">

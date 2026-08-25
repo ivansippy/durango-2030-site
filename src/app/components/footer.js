@@ -20,6 +20,11 @@ const Footer = () => {
                 coordinator@durangocyclingchampionship.com
               </Link>
             </p>
+            <p className={`${grotesk.className} text-gray-700 hover:text-blue-500 mb-2`}>
+              <Link href="mailto:ryan@durangocyclingchampionship.com">
+                ryan@durangocyclingchampionship.com
+              </Link>
+            </p>
             <p className={`${grotesk.className} text-gray-700 mb-2`}>
               © 2026 Durango Cycling Championships. All rights reserved.
             </p>
