@@ -12,11 +12,41 @@ interface YearMilestone {
 
 // Placeholder bullets — swap in the real milestones per year when available.
 const MILESTONES: YearMilestone[] = [
-  { year: 2026, bullets: ["Details coming soon"] },
-  { year: 2027, bullets: ["Details coming soon"] },
-  { year: 2028, bullets: ["Details coming soon"] },
-  { year: 2029, bullets: ["Details coming soon"] },
-  { year: 2030, bullets: ["Details coming soon"] },
+  {
+    year: 2026,
+    bullets: [
+      "UCI Site Visit",
+      "Downhill/XCO/XCC course review with Durango World Cup Racers",
+      "Durango 2030 “Riding into our Future” workshop",
+      "Nonprofit and Enterprise Zone Designation",
+      "Airport Wall display",
+    ],
+  },
+  { year: 2027, bullets: [
+      "2028/2029 International Event announcement",
+      "Course build round one (XCO/XCC)  Downhill course updates",
+      "Branding and merchandise development",
+      "Test races on all courses",
+      "Local Organizing Committee buildout.",
+  ] },
+  { year: 2028, bullets: [
+      "Final trail and venue infrastructure construction",
+      "Final site visits from support organizations related to International events",
+      "Community Services in place to serve spectators, teams, and riders",
+      "September - Green flag drops on 2028 event",
+  ] },
+  { year: 2029, bullets: [
+      "Course and venue refinements from 2028 event",
+      "Ancillary event planning for 2030 World Championships ( Dual Slalom/Adaptive MTB, 40th Anniversary…)",
+      "UCI Site visit for 2030 World Championships",
+      "September - International race #2",
+  ] },
+  { year: 2030, bullets: [
+      "Final course/venue refinements and changes",
+      "Community planning in final stages",
+      "Event menu complete including ancillary events",
+      "August - The World Comes to Durango ~ 40th Anniversary.",
+  ] },
 ];
 
 function subscribe() {
